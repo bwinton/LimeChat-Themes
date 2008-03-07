@@ -127,3 +127,7 @@ body.normal .event .message {
   -khtml-line-break: after-white-space;
   -khtml-nbsp-mode: space;
 }
+
+body.normal .event .message[type=reply] {
+    color: #01880D;
+}
