@@ -128,6 +128,6 @@ body.normal .event .message {
   -khtml-nbsp-mode: space;
 }
 
-body.normal .event .message[type=reply] {
+body.normal .event .message[type=reply], body.normal .event .message[type=topic] {
     color: #01880D;
 }
