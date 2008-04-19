@@ -131,3 +131,11 @@ body.normal .event .message {
 body.normal .event .message[type=reply], body.normal .event .message[type=topic] {
     color: #01880D;
 }
+
+body.normal .event .time {
+    display: none;
+}
+
+body.normal .event:hover .time {
+    display: inline;
+}
