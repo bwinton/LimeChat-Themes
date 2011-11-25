@@ -2,8 +2,6 @@
 # You cannot use color names.
 
 log-view:
-    font-family: 'Helvetica Neue'
-    font-size: 13.0
     nickname-format: '%n '
     scroller-highlight-color: '#f0f'
 
@@ -31,7 +29,6 @@ member-list:
 
 server-tree:
     font-family: 'Helvetica Neue'
-    font-size: 13.0
     background-color: '#dee3e9'
     highlight:
         color: '#f0f'
@@ -46,7 +43,7 @@ server-tree:
             color: '#ccc'
     selected:
         active:
-            color: '#fff'
+            color: 'black'
         inactive:
             color: '#eee'
         background:

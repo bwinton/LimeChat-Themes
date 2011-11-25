@@ -2,13 +2,14 @@ html.normal,
 html.console {
     color: #4b4b4b;
     background-color: white;
-    font: 14px/1.5em "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font: 13px "Helvetica Neue";
     margin: 0;
     padding: 0;
 }
 
 body.normal .sender[type=myself]:hover:after {
     content: " •";
+    color: darkgrey;
 }
 
 body.normal a img {
@@ -63,7 +64,6 @@ body.normal .sender {
     padding: 0.4em 4px 0.4em 0;
     float: left;
     text-align: right;
-    font-weight: bold;
     width: 6em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -86,20 +86,28 @@ body.normal .event .message {
 
 body.normal .line .time {
     float: left;
+    opacity :.2;
     margin-right: 6px;
     margin-top: 5px;
     margin-left: 4px;
 }
-
+body.normal .line .time:hover {
+    opacity: 1;
+}
 body.normal .line .place {
     display: block;
     margin: 0;
 }
 
 body.normal .event .time {
+    opacity: 0.3;
     margin: 1px 3px;
     float: left;
     text-align: right;
+}
+
+body.normal .event .time:hover {
+    opacity: 1;
 }
 
 body.normal .event:hover {
@@ -107,7 +115,7 @@ body.normal .event:hover {
 }
 
 body.normal .line[highlight=true] span.message {
-    background-color: #ffc;
+    background-color: #E7FFE5;
 }
 
 body.normal .member {
@@ -186,18 +194,18 @@ body.normal .address {
 }
 
 .highlight {
-    color: #f0f;
+    color: #FF44F3;
     font-weight: bold;
 }
 
 /* nickname for text messages */
-.sender[type=myself] { color: #f0f; font-weight: bold; }
-.sender[type=normal] { color: #05c; }
-.sender[type=normal][colornumber='0'] { color: #f40; }
-.sender[type=normal][colornumber='1'] { color: #f88; }
-.sender[type=normal][colornumber='2'] { color: #084; }
-.sender[type=normal][colornumber='3'] { color: #880; }
-.sender[type=normal][colornumber='4'] { color: #080; }
+.sender[type=myself] { color: #FF44F3; font-weight: bold; }
+.sender[type=normal] { color: #65427A; }
+.sender[type=normal][colornumber='0'] { color: #ACA91B; }
+.sender[type=normal][colornumber='1'] { color: #FC6358; }
+.sender[type=normal][colornumber='2'] { color: #8F1148; }
+.sender[type=normal][colornumber='3'] { color: #592831; }
+.sender[type=normal][colornumber='4'] { color: #543E3E; }
 .sender[type=normal][colornumber='5'] { color: #088; }
 .sender[type=normal][colornumber='6'] { color: #44f; }
 .sender[type=normal][colornumber='7'] { color: #48f; }
@@ -271,20 +279,17 @@ body.normal .address {
 .effect[bgcolor-number='15'] {}
 
 body.normal .sender[first=false] {
-    color: #eee !important;
+    opacity :0;
     margin-right: 0;
 }
 body.normal .sender[first=false]:hover {
-    color: black !important;
+    opacity :0.5;
 }
 body.normal .sender[first=false]:after {
     content:"»";
-    color: black;
+    color: darkgrey;
 }
 body.normal .sender[type=myself]:after {
-    content: " ★";
-}
-
-body.normal .sender[type=myself] + .message {
-    background-color: #f5f5f5;
+    color: darkgrey;
+    content: " •";
 }
