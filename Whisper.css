@@ -127,26 +127,6 @@ body.normal .member:hover {
     text-decoration: underline;
 }
 
-body.normal {
-    
-}
-
-body.console {
-    
-}
-
-body[type=channel] {
-    
-}
-
-body[type=talk] {
-    
-}
-
-body[type=console] {
-    
-}
-
 body.normal hr {
     margin: 0;
     padding: 2px;
@@ -156,19 +136,7 @@ body.normal hr {
     text-align: center;
 }
 
-a {
-    
-}
-
 /* lines */
-
-.line[alternate=even] {
-    
-}
-
-.line[alternate=odd] {
-    
-}
 
 .line[type=action] .sender:before {
     content: "";
