@@ -24,12 +24,6 @@ body.normal img {
     max-width: 95%;
 }
 
-/*
-body.normal a:link, a:visited, a:hover, a:active {
-    color: #184586;
-}
-*/
-
 body.normal .text > span {
     display: block;
 }
@@ -114,10 +108,6 @@ body.normal .event:hover {
     color: #303030;
 }
 
-body.normal .line[highlight=true] span.message {
-    background-color: #E7FFE5;
-}
-
 body.normal .member {
     text-decoration: none !important;
     color: inherit !important;
@@ -140,10 +130,6 @@ body.normal hr {
 
 .line[type=action] .sender:before {
     content: "";
-}
-
-body.normal .line[type=action] .sender {
-    font-style: italic;
 }
 
 body.normal .line[type=action] .message {
@@ -251,13 +237,25 @@ body.normal .sender[first=false] {
     margin-right: 0;
 }
 body.normal .sender[first=false]:hover {
-    opacity :0.5;
+    opacity :0.75;
 }
-body.normal .sender[first=false]:after {
-    content:"»";
+body.normal .sender[first=false] + span:before{
+    content: "» ";
     color: darkgrey;
 }
 body.normal .sender[type=myself]:after {
     color: darkgrey;
     content: " •";
 }
+
+body.normal .line[type=action] .sender[first=false] {
+    opacity :1;
+}
+body.normal .line[type=action] .sender[first=false] + span:before{
+    content: "";
+}
+body.normal .line[type=action] .sender[type=myself]:after {
+    color: darkgrey;
+    content: "";
+}
+
