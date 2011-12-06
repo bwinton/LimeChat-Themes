@@ -24,6 +24,12 @@ body.normal img {
     max-width: 95%;
 }
 
+/*
+body.normal a:link, a:visited, a:hover, a:active {
+    color: #184586;
+}
+*/
+
 body.normal .text > span {
     display: block;
 }
@@ -31,12 +37,14 @@ body.normal .text > span {
 body.normal .line {
     padding: 0;
     margin: 0;
-    background-color: #eee;
-    color: #303030;
-    line-height: 130%;
+/*    background-color: #eee;
+*/    color: #303030;
+    line-height: 100%;
 }
 
 body.normal .event {
+    font-size: 8pt;
+    text-align: right;
     padding: 0.2em;
     margin: 0;
     color: #707070;
@@ -47,7 +55,7 @@ body.normal .event + .event {
 }
 
 body.normal .text span.message {
-    border-bottom: #efefef 1px solid;
+    /*border-bottom: #efefef 1px solid;*/
 }
 
 body.normal .text + .event {
@@ -58,7 +66,7 @@ body.normal .sender {
     padding: 0.4em 4px 0.4em 0;
     float: left;
     text-align: right;
-    width: 6em;
+    width: 9em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -79,7 +87,7 @@ body.normal .event .message {
 }
 
 body.normal .line .time {
-    float: left;
+    float: right;
     opacity :.2;
     margin-right: 6px;
     margin-top: 5px;
@@ -94,9 +102,9 @@ body.normal .line .place {
 }
 
 body.normal .event .time {
-    opacity: 0.3;
+    float: right;
+    opacity: 0.2;
     margin: 1px 3px;
-    float: left;
     text-align: right;
 }
 
@@ -108,6 +116,10 @@ body.normal .event:hover {
     color: #303030;
 }
 
+body.normal .line[highlight=true] span.message {
+    background-color: #ffc;
+}
+
 body.normal .member {
     text-decoration: none !important;
     color: inherit !important;
@@ -115,6 +127,26 @@ body.normal .member {
 
 body.normal .member:hover {
     text-decoration: underline;
+}
+
+body.normal {
+    
+}
+
+body.console {
+    
+}
+
+body[type=channel] {
+    
+}
+
+body[type=talk] {
+    
+}
+
+body[type=console] {
+    
 }
 
 body.normal hr {
@@ -126,10 +158,26 @@ body.normal hr {
     text-align: center;
 }
 
+a {
+    
+}
+
 /* lines */
+
+.line[alternate=even] {
+    
+}
+
+.line[alternate=odd] {
+    
+}
 
 .line[type=action] .sender:before {
     content: "";
+}
+
+body.normal .line[type=action] .sender {
+    font-style: italic;
 }
 
 body.normal .line[type=action] .message {
@@ -148,19 +196,19 @@ body.normal .address {
 }
 
 .highlight {
-    color: #FF44F3;
+    color: #3791A3;
     font-weight: bold;
 }
 
 /* nickname for text messages */
-.sender[type=myself] { color: #FF44F3; font-weight: bold; }
+.sender[type=myself] { color: #3791A3; font-weight: bold; }
 .sender[type=normal] { color: #65427A; }
-.sender[type=normal][colornumber='0'] { color: #ACA91B; }
-.sender[type=normal][colornumber='1'] { color: #FC6358; }
-.sender[type=normal][colornumber='2'] { color: #8F1148; }
-.sender[type=normal][colornumber='3'] { color: #592831; }
-.sender[type=normal][colornumber='4'] { color: #543E3E; }
-.sender[type=normal][colornumber='5'] { color: #088; }
+.sender[type=normal][colornumber='0'] { color: #025185; }
+.sender[type=normal][colornumber='1'] { color: #991818; }
+.sender[type=normal][colornumber='2'] { color: #B14623; }
+.sender[type=normal][colornumber='3'] { color: #F6921D; }
+.sender[type=normal][colornumber='4'] { color: #00B9D2; }
+.sender[type=normal][colornumber='5'] { color: #025185; }
 .sender[type=normal][colornumber='6'] { color: #44f; }
 .sender[type=normal][colornumber='7'] { color: #48f; }
 .sender[type=normal][colornumber='8'] { color: #80f; }
@@ -233,29 +281,22 @@ body.normal .address {
 .effect[bgcolor-number='15'] {}
 
 body.normal .sender[first=false] {
-    opacity :0;
+    /*color: darkgrey !important;*/
+    opacity: 0.6;
     margin-right: 0;
 }
 body.normal .sender[first=false]:hover {
-    opacity :0.75;
+    /*color: darkgrey !important;*/
 }
-body.normal .sender[first=false] + span:before{
-    content: "» ";
+body.normal .sender[first=false]:before {
+    content:"» ";
     color: darkgrey;
 }
-body.normal .sender[type=myself]:after {
+/*body.normal .sender[type=myself]:after {
     color: darkgrey;
     content: " •";
 }
-
-body.normal .line[type=action] .sender[first=false] {
-    opacity :1;
+*/
+body.normal .sender[type=myself] + .message {
+    background-color: #f5f5f5;
 }
-body.normal .line[type=action] .sender[first=false] + span:before{
-    content: "";
-}
-body.normal .line[type=action] .sender[type=myself]:after {
-    color: darkgrey;
-    content: "";
-}
-
