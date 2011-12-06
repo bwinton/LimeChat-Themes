@@ -31,16 +31,16 @@ server-tree:
     font-family: 'Helvetica Neue'
     background-color: '#dee3e9'
     highlight:
-        color: '#f0f'
+        color: '#A9618E'
     newtalk:
         color: '#d33b54'
     unread:
-        color: '#00f'
+        color: '#3791A3'
     normal:
         active:
             color: '#333'
         inactive:
-            color: '#777'
+            color: '#888'
     selected:
         active:
             color: 'black'
