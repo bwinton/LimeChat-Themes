@@ -1,0 +1,10 @@
+DecafBland (LimeChat)
+Kevin Ballard
+kevin@sb.org
+
+This is a theme for LimeChat, based off of the DecafBland theme from Colloquy.
+
+To install, simply copy (or symlink) the two files DecafBland.css and DecafBland.yaml
+into ~/Library/Application Support/LimeChat/Themes/
+
+The two files DecafBland-Inverted.{css,yaml} are for the Inverted variant.
